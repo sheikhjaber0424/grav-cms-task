@@ -925,9 +925,6 @@ ul.pagination {
 
 
 
-
-
-/* Navbar */
 #header {
   background-color: #1d3988;
   color: #fff;
@@ -1001,16 +998,16 @@ ul.pagination {
 
 
 .side-items {
-  list-style-type: none; /* Remove default list style */
+  list-style-type: none; 
   padding: 7%;
-  text-align: center; /* Center align list items */
+  text-align: center; 
 
 
  
 }
 
 .side-items li {
-  display: inline-block; /* Display list items horizontally */
+  display: inline-block; 
   margin-bottom: 10px;
  
 
@@ -1019,28 +1016,28 @@ ul.pagination {
 .side-items li a.button {
   display: block;
   padding: 7px 20px;
-  background-color: #007bff; /* Change to your desired button color */
+  background-color: #007bff; 
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
-  width: 180px; /* Set the exact width */
-  text-align: center; /* Center align text */
-  position: relative; /* Position relative for pseudo-element */
+  width: 180px; 
+  text-align: center; 
+  position: relative; 
 }
 
 .side-items li a.button:hover {
-  background-color: #0056b3; /* Change to your desired hover color */
+  background-color: #0056b3; 
 }
 
-/* Show bullet point sign */
+
 .side-items li a.button::before {
-  content: '\2022'; /* Unicode character for bullet point */
+  content: '\2022'; 
   position: absolute;
-  left: 10px; /* Adjust as needed */
-  top: 50%; /* Vertically center */
-  transform: translateY(-50%); /* Vertically center */
-  color: #fff; /* Match text color */
-  font-size: 1.2em; /* Adjust as needed */
+  left: 10px;
+  top: 50%; 
+  transform: translateY(-50%); 
+  color: #fff; 
+  font-size: 1.2em; 
 }
 
 #side-div
