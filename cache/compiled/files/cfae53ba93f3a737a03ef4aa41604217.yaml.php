@@ -2,8 +2,8 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'D:/laragon/www/my-grav-site/user/plugins/form/languages.yaml',
-    'modified' => 1714984872,
-    'size' => 62711,
+    'modified' => 1711699270,
+    'size' => 62859,
     'data' => [
         'en' => [
             'PLUGIN_FORM' => [
@@ -94,7 +94,9 @@ return [
                 'BASIC_CAPTCHA_MATH_MIN' => 'Minimum number',
                 'BASIC_CAPTCHA_MATH_MAX' => 'Maximum number',
                 'BASIC_CAPTCHA_MATH_OPERATORS' => 'Mathematical operators (randomized)',
-                'TURNSTILE_CAPTCHA' => 'Cloudflare Turnstile Captcha'
+                'TURNSTILE_CAPTCHA' => 'Cloudflare Turnstile Captcha',
+                'MODULAR_FORM_FIX' => 'Modular Form Fix',
+                'MODULAR_FORM_FIX_HELP' => 'Fixes the issue with modular forms not finding the correct form automatically'
             ]
         ],
         'eu' => [

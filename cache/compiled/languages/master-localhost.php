@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledLanguages',
-    'timestamp' => 1714995947,
-    'checksum' => 'baf4fbb6ee2726bbe06c105df330a714',
+    'timestamp' => 1715066475,
+    'checksum' => 'fbf8119c2d83240ff4c6ea815d51eb59',
     'files' => [
         'system/languages' => [
             'ar' => [
@@ -209,7 +209,7 @@ return [
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/languages.yaml',
-                'modified' => 1714984872
+                'modified' => 1711699270
             ],
             'plugins/markdown-notices' => [
                 'file' => 'user/plugins/markdown-notices/languages.yaml',
@@ -3644,7 +3644,9 @@ You have **2FA** enabled on this account. Please use your **2FA** app to enter t
                 'BASIC_CAPTCHA_MATH_MIN' => 'Minimum number',
                 'BASIC_CAPTCHA_MATH_MAX' => 'Maximum number',
                 'BASIC_CAPTCHA_MATH_OPERATORS' => 'Mathematical operators (randomized)',
-                'TURNSTILE_CAPTCHA' => 'Cloudflare Turnstile Captcha'
+                'TURNSTILE_CAPTCHA' => 'Cloudflare Turnstile Captcha',
+                'MODULAR_FORM_FIX' => 'Modular Form Fix',
+                'MODULAR_FORM_FIX_HELP' => 'Fixes the issue with modular forms not finding the correct form automatically'
             ],
             'PLUGIN_MARKDOWN_NOTICES' => [
                 'USE_BUILT_IN_CSS' => 'Use built-in CSS',

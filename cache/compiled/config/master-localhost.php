@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1714995946,
-    'checksum' => 'cbe442db83f1b91f55b1ce47f5a9cc1a',
+    'timestamp' => 1715066474,
+    'checksum' => '11d9dff92c84a21bbf8890adcd88c6d1',
     'files' => [
         'user/config' => [
             'media' => [
@@ -19,7 +19,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1714995942
+                'modified' => 1715066470
             ],
             'versions' => [
                 'file' => 'user/config/versions.yaml',
@@ -75,7 +75,7 @@ return [
             ],
             'plugins/form' => [
                 'file' => 'user/plugins/form/form.yaml',
-                'modified' => 1714984872
+                'modified' => 1711699270
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
@@ -88,6 +88,10 @@ return [
             'plugins/problems' => [
                 'file' => 'user/plugins/problems/problems.yaml',
                 'modified' => 1714984876
+            ],
+            'plugins/shortcode-core' => [
+                'file' => 'user/plugins/shortcode-core/shortcode-core.yaml',
+                'modified' => 1654158256
             ]
         ],
         'user/themes' => [
@@ -278,6 +282,7 @@ return [
                 'client_side_validation' => true,
                 'debug' => false,
                 'inline_errors' => false,
+                'modular_form_fix' => true,
                 'files' => [
                     'multiple' => false,
                     'limit' => 10,
@@ -400,6 +405,28 @@ return [
             'problems' => [
                 'enabled' => true,
                 'built_in_css' => true
+            ],
+            'shortcode-core' => [
+                'enabled' => true,
+                'active' => true,
+                'active_admin' => true,
+                'admin_pages_only' => true,
+                'parser' => 'regular',
+                'include_default_shortcodes' => true,
+                'css' => [
+                    'notice_enabled' => true
+                ],
+                'custom_shortcodes' => NULL,
+                'fontawesome' => [
+                    'load' => true,
+                    'url' => '//maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css',
+                    'v5' => false
+                ],
+                'nextgen-editor' => [
+                    'env' => 'production',
+                    'dev_host' => 'localhost',
+                    'dev_port' => 2001
+                ]
             ]
         ],
         'backups' => [

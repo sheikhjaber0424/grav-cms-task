@@ -1,0 +1,53 @@
+1715069276
+O:39:"Grav\Common\Flex\Types\Pages\PageObject":4:{s:4:"type";s:5:"pages";s:3:"key";s:7:"contact";s:8:"elements";a:4:{s:4:"root";b:0;s:6:"header";a:1:{s:5:"title";s:7:"Contact";}s:11:"frontmatter";s:14:"title: Contact";s:8:"markdown";s:1214:"[center]<h1>Contact Us</h1>[/center]
+form:
+name: contact
+
+    fields:
+        name:
+          label: Name
+          placeholder: Enter your name
+          autocomplete: on
+          type: text
+          validate:
+            required: true
+
+        email:
+          label: Email
+          placeholder: Enter your email address
+          type: email
+          validate:
+            required: true
+
+        message:
+          label: Message
+          placeholder: Enter your message
+          type: textarea
+          validate:
+            required: true
+
+        g-recaptcha-response:
+          label: Captcha
+          type: captcha
+          recaptcha_not_validated: 'Captcha not valid!'
+
+    buttons:
+        submit:
+          type: submit
+          value: Submit
+        reset:
+          type: reset
+          value: Reset
+
+    process:
+        captcha: true
+        save:
+            fileprefix: contact-
+            dateformat: Ymd-His-u
+            extension: txt
+            body: "{% include 'forms/data.txt.twig' %}"
+        email:
+            subject: "[Site Contact Form] {{ form.value.name|e }}"
+            body: "{% include 'forms/data.html.twig' %}"
+        message: Thank you for getting in touch!
+";}s:7:"storage";a:6:{s:3:"key";s:7:"contact";s:11:"storage_key";s:10:"05.contact";s:8:"template";s:4:"form";s:17:"storage_timestamp";i:1715066361;s:8:"markdown";a:1:{s:0:"";a:1:{s:4:"form";i:1715066361;}}s:8:"checksum";s:32:"ea818be47a711fb4261f4ea3f56fd278";}}

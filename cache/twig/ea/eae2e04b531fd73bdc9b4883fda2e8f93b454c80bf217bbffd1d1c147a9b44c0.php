@@ -30,27 +30,14 @@ class __TwigTemplate_e2286cb123ab55ebd2e874ae7f764daaa49807a4c6269f4cd918e6e2e61
         if (($this->getAttribute(($context["form"] ?? null), "xhr_submit", []) == true)) {
             // line 2
             echo "  ";
-            $this->getAttribute(($context["assets"] ?? null), "addInlineJs", [0 => (((("
-    document.addEventListener('DOMContentLoaded', function() {
-        var form = document.getElementById('" . $this->getAttribute(            // line 4
+            $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "plugin://form/assets/xhr-submitter.js", 1 => ["group" => "bottom", "position" => "before"]], "method");
+            // line 3
+            echo "  ";
+            $this->getAttribute(($context["assets"] ?? null), "addInlineJs", [0 => (("
+    document.addEventListener('DOMContentLoaded', () => {
+        attachFormSubmitListener('" . $this->getAttribute(            // line 5
 ($context["form"] ?? null), "id", [])) . "');
-        form.addEventListener('submit', function(e) {
-            // prevent standard form submission
-            e.preventDefault();
-            // submit the form via Ajax
-            var xhr = new XMLHttpRequest();
-            xhr.open(form.getAttribute('method'), form.getAttribute('action'));
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                    document.getElementById('") . $this->getAttribute(            // line 14
-($context["form"] ?? null), "id", [])) . "').innerHTML = xhr.responseText;
-                }
-            };
-            xhr.send(new URLSearchParams(new FormData(form)).toString());
-        });
-    });
-  "), 1 => ["group" => "bottom", "position" => "before", "priority" => 100]], "method");
+    });"), 1 => ["group" => "bottom", "position" => "before"]], "method");
         }
     }
 
@@ -66,7 +53,7 @@ class __TwigTemplate_e2286cb123ab55ebd2e874ae7f764daaa49807a4c6269f4cd918e6e2e61
 
     public function getDebugInfo()
     {
-        return array (  47 => 14,  36 => 4,  32 => 2,  30 => 1,);
+        return array (  39 => 5,  35 => 3,  32 => 2,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -80,25 +67,12 @@ class __TwigTemplate_e2286cb123ab55ebd2e874ae7f764daaa49807a4c6269f4cd918e6e2e61
     public function getSourceContext()
     {
         return new Source("{% if form.xhr_submit == true %}
+  {% do assets.addJs('plugin://form/assets/xhr-submitter.js', {'group': 'bottom', 'position': 'before'}) %}
   {% do assets.addInlineJs(\"
-    document.addEventListener('DOMContentLoaded', function() {
-        var form = document.getElementById('\" ~ form.id ~ \"');
-        form.addEventListener('submit', function(e) {
-            // prevent standard form submission
-            e.preventDefault();
-            // submit the form via Ajax
-            var xhr = new XMLHttpRequest();
-            xhr.open(form.getAttribute('method'), form.getAttribute('action'));
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                    document.getElementById('\" ~ form.id ~ \"').innerHTML = xhr.responseText;
-                }
-            };
-            xhr.send(new URLSearchParams(new FormData(form)).toString());
-        });
-    });
-  \", {'group': 'bottom', 'position': 'before', 'priority': 100}) %}
+    document.addEventListener('DOMContentLoaded', () => {
+        attachFormSubmitListener('\" ~ form.id ~ \"');
+    });\",
+    {'group': 'bottom', 'position': 'before'}) %}
 {% endif %}", "forms/layouts/xhr.html.twig", "D:\\laragon\\www\\my-grav-site\\user\\plugins\\form\\templates\\forms\\layouts\\xhr.html.twig");
     }
 }

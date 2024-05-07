@@ -2,13 +2,13 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'D:/laragon/www/my-grav-site/user/plugins/form/blueprints.yaml',
-    'modified' => 1714984872,
-    'size' => 10463,
+    'modified' => 1711699270,
+    'size' => 10788,
     'data' => [
         'name' => 'Form',
         'slug' => 'form',
         'type' => 'plugin',
-        'version' => '7.3.0',
+        'version' => '7.4.0',
         'description' => 'Enables forms handling and processing',
         'icon' => 'check-square',
         'author' => [
@@ -119,6 +119,20 @@ return [
                             'help' => 'PLUGIN_FORM.INLINE_ERRORS_HELP',
                             'highlight' => 0,
                             'default' => 0,
+                            'options' => [
+                                1 => 'PLUGIN_ADMIN.ENABLED',
+                                0 => 'PLUGIN_ADMIN.DISABLED'
+                            ],
+                            'validate' => [
+                                'type' => 'bool'
+                            ]
+                        ],
+                        'modular_form_fix' => [
+                            'type' => 'toggle',
+                            'label' => 'PLUGIN_FORM.MODULAR_FORM_FIX',
+                            'help' => 'PLUGIN_FORM.MODULAR_FORM_FIX_HELP',
+                            'highlight' => 1,
+                            'default' => 1,
                             'options' => [
                                 1 => 'PLUGIN_ADMIN.ENABLED',
                                 0 => 'PLUGIN_ADMIN.DISABLED'

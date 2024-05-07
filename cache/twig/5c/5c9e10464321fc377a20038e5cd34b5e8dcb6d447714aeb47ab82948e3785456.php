@@ -27,7 +27,7 @@ class __TwigTemplate_53fb57f71ab9171982fa8daea2b9ca4f4faf2a1a62a20096b7733dba5c5
     protected function doDisplay(array $context, array $blocks = [])
     {
         // line 1
-        $this->loadTemplate("partials/login-form.html.twig", "partials/login-form.html.twig", 1, "829209942")->display(twig_array_merge($context, ["title" => "Grav Admin Login"]));
+        $this->loadTemplate("partials/login-form.html.twig", "partials/login-form.html.twig", 1, "773850192")->display(twig_array_merge($context, ["title" => "Grav Admin Login"]));
     }
 
     public function getTemplateName()
@@ -86,7 +86,7 @@ class __TwigTemplate_53fb57f71ab9171982fa8daea2b9ca4f4faf2a1a62a20096b7733dba5c5
 
 
 /* partials/login-form.html.twig */
-class __TwigTemplate_53fb57f71ab9171982fa8daea2b9ca4f4faf2a1a62a20096b7733dba5c565766___829209942 extends \Twig\Template
+class __TwigTemplate_53fb57f71ab9171982fa8daea2b9ca4f4faf2a1a62a20096b7733dba5c565766___773850192 extends \Twig\Template
 {
     public function __construct(Environment $env)
     {
@@ -160,7 +160,7 @@ class __TwigTemplate_53fb57f71ab9171982fa8daea2b9ca4f4faf2a1a62a20096b7733dba5c5
     {
         // line 13
         echo "    ";
-        $this->loadTemplate("partials/login-form.html.twig", "partials/login-form.html.twig", 13, "782574466")->display(twig_array_merge($context, ["name" => null, "fields" => $this->getAttribute(($context["form"] ?? null), "fields", [])]));
+        $this->loadTemplate("partials/login-form.html.twig", "partials/login-form.html.twig", 13, "567125158")->display(twig_array_merge($context, ["name" => null, "fields" => $this->getAttribute(($context["form"] ?? null), "fields", [])]));
         // line 17
         echo "
     <div class=\"form-actions primary-accent\">
@@ -235,7 +235,7 @@ class __TwigTemplate_53fb57f71ab9171982fa8daea2b9ca4f4faf2a1a62a20096b7733dba5c5
 
 
 /* partials/login-form.html.twig */
-class __TwigTemplate_53fb57f71ab9171982fa8daea2b9ca4f4faf2a1a62a20096b7733dba5c565766___782574466 extends \Twig\Template
+class __TwigTemplate_53fb57f71ab9171982fa8daea2b9ca4f4faf2a1a62a20096b7733dba5c565766___567125158 extends \Twig\Template
 {
     public function __construct(Environment $env)
     {

@@ -2,8 +2,8 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'D:/laragon/www/my-grav-site/user/plugins/form/form.yaml',
-    'modified' => 1714984872,
-    'size' => 1727,
+    'modified' => 1711699270,
+    'size' => 1750,
     'data' => [
         'enabled' => true,
         'built_in_css' => true,
@@ -12,6 +12,7 @@ return [
         'client_side_validation' => true,
         'debug' => false,
         'inline_errors' => false,
+        'modular_form_fix' => true,
         'files' => [
             'multiple' => false,
             'limit' => 10,
