@@ -995,19 +995,10 @@ ul.pagination {
   width: 20%;
   min-height: 400px;
   top:0;
-  
+  min-width: 250px;
   
 }
 
-@media screen and (max-width: 768px) {
-  #body {
-      flex-direction: column;
-  }
-  #main, #sidebar {
-      width: 100%;
-  }
-  
-}
 
 .side-items {
   list-style-type: none; /* Remove default list style */
@@ -1061,4 +1052,35 @@ ul.pagination {
 .recent{
   text-align: center;
  padding-top: 20px;
+}
+
+form {
+  padding:0 20%;
+}
+
+@media only screen and  (max-width: 1024px) {
+
+  #main{
+      width: 80%;
+  }
+  #sidebar {
+    width: 20%;
+  }
+  #side-div {
+    min-width: 250px;
+  }
+  form {
+    padding:0 10%;
+  }
+  }
+@media screen and (max-width: 768px) {
+  #body {
+      flex-direction: column;
+  }
+  #main, #sidebar {
+      width: 100%;
+  }
+  form {
+    padding:0 10%;
+  }
 }

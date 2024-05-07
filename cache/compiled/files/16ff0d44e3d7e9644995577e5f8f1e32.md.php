@@ -2,8 +2,8 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledMarkdownFile',
     'filename' => 'D:/laragon/www/my-grav-site/user/pages/05.contact/form.md',
-    'modified' => 1715068995,
-    'size' => 612,
+    'modified' => 1715069128,
+    'size' => 564,
     'data' => [
         'header' => [
             'title' => 'Contact',
@@ -40,10 +40,6 @@ return [
                     'submit' => [
                         'type' => 'submit',
                         'value' => 'Submit'
-                    ],
-                    'reset' => [
-                        'type' => 'reset',
-                        'value' => 'Reset'
                     ]
                 ]
             ]
@@ -78,10 +74,7 @@ form:
   buttons:
     submit:
       type: submit
-      value: Submit
-    reset:
-      type: reset
-      value: Reset',
+      value: Submit',
         'markdown' => '[center]<h1>Contact Us</h1>[/center]
 '
     ]
