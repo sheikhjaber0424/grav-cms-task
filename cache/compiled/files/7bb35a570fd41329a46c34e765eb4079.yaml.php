@@ -2,14 +2,14 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'D:/laragon/www/my-grav-site/user/config/site.yaml',
-    'modified' => 1714987945,
-    'size' => 334,
+    'modified' => 1715083196,
+    'size' => 327,
     'data' => [
         'title' => 'Metricalo',
         'default_lang' => 'en',
         'author' => [
-            'name' => 'Joe Bloggs',
-            'email' => 'joe@example.com'
+            'name' => 'jaber',
+            'email' => 'jaber@gmail.com'
         ],
         'taxonomies' => [
             0 => 'category',

@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1715066474,
-    'checksum' => '11d9dff92c84a21bbf8890adcd88c6d1',
+    'timestamp' => 1715083196,
+    'checksum' => '699a07767d1a218de55e7f663c07f353',
     'files' => [
         'user/config' => [
             'media' => [
@@ -15,7 +15,7 @@ return [
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1714987945
+                'modified' => 1715083196
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
@@ -3844,8 +3844,8 @@ node_modules'
             'title' => 'Metricalo',
             'default_lang' => 'en',
             'author' => [
-                'name' => 'Joe Bloggs',
-                'email' => 'joe@example.com'
+                'name' => 'jaber',
+                'email' => 'jaber@gmail.com'
             ],
             'taxonomies' => [
                 0 => 'category',

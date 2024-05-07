@@ -2,11 +2,11 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledJsonFile',
     'filename' => 'D:/laragon/www/my-grav-site/user/data/flex/indexes/pages.json',
-    'modified' => 1715070155,
+    'modified' => 1715081681,
     'size' => 828,
     'data' => [
         'version' => '1.5',
-        'timestamp' => 1715070155,
+        'timestamp' => 1715081681,
         'count' => 4,
         'index' => [
             '' => [
@@ -25,13 +25,13 @@ return [
                 'key' => 'home',
                 'storage_key' => '01.home',
                 'template' => 'default',
-                'storage_timestamp' => 1715065767,
+                'storage_timestamp' => 1715081681,
                 'markdown' => [
                     '' => [
-                        'default' => 1715065767
+                        'default' => 1715081681
                     ]
                 ],
-                'checksum' => '327257c1fc4acd16f3efb02f550b6105'
+                'checksum' => 'de11674b354886ca541f90c6639004d4'
             ],
             '04.about' => [
                 'key' => 'about',

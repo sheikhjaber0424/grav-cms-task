@@ -1,4 +1,4 @@
-1715080485
+1715082233
 O:39:"Grav\Common\Flex\Types\Pages\PageObject":4:{s:4:"type";s:5:"pages";s:3:"key";s:7:"contact";s:8:"elements";a:4:{s:4:"root";b:0;s:6:"header";a:2:{s:5:"title";s:7:"Contact";s:4:"form";a:3:{s:4:"name";s:7:"contact";s:6:"fields";a:3:{s:4:"name";a:5:{s:5:"label";s:4:"Name";s:11:"placeholder";s:15:"Enter your name";s:12:"autocomplete";s:2:"on";s:4:"type";s:4:"text";s:8:"validate";a:1:{s:8:"required";b:1;}}s:5:"email";a:4:{s:5:"label";s:5:"Email";s:11:"placeholder";s:24:"Enter your email address";s:4:"type";s:5:"email";s:8:"validate";a:1:{s:8:"required";b:1;}}s:7:"message";a:4:{s:5:"label";s:7:"Message";s:11:"placeholder";s:18:"Enter your message";s:4:"type";s:8:"textarea";s:8:"validate";a:1:{s:8:"required";b:1;}}}s:7:"buttons";a:1:{s:6:"submit";a:2:{s:4:"type";s:6:"submit";s:5:"value";s:6:"Submit";}}}}s:11:"frontmatter";s:517:"title: Contact
 form:
   name: contact
