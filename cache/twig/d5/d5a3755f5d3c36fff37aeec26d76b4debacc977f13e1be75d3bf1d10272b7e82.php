@@ -45,43 +45,43 @@ class __TwigTemplate_ede6dbd58457fb8ba7161dcc99503b2bf340f4eec9c3a8a5d6c9fa134c0
         // line 3
         echo twig_escape_filter($this->env, (($this->getAttribute($this->getAttribute(($context["grav"] ?? null), "language", []), "getActive", [])) ? ($this->getAttribute($this->getAttribute(($context["grav"] ?? null), "language", []), "getActive", [])) : ($this->getAttribute($this->getAttribute($this->getAttribute(($context["grav"] ?? null), "config", []), "site", []), "default_lang", []))), "html", null, true);
         echo "\">
-<head>
-";
+\t<head>
+\t\t";
         // line 5
         $this->displayBlock('head', $context, $blocks);
-        // line 43
-        echo "</head>
-<body id=\"top\" class=\"";
-        // line 44
+        // line 48
+        echo "\t</head>
+\t<body id=\"top\" class=\"";
+        // line 49
         echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute(($context["page"] ?? null), "header", []), "body_classes", []), "html", null, true);
         echo "\">
-    <div id=\"sb-site\">
-        ";
-        // line 46
-        $this->displayBlock('header', $context, $blocks);
-        // line 50
-        echo "
-        ";
+\t\t<div id=\"sb-site\">
+\t\t\t";
         // line 51
+        $this->displayBlock('header', $context, $blocks);
+        // line 55
+        echo "
+\t\t\t";
+        // line 56
         $this->displayBlock('showcase', $context, $blocks);
-        // line 52
+        // line 57
         echo "
-        ";
-        // line 53
+\t\t\t";
+        // line 58
         $this->displayBlock('body', $context, $blocks);
-        // line 65
+        // line 69
         echo "
-        ";
-        // line 66
-        $this->displayBlock('footer', $context, $blocks);
+\t\t\t";
         // line 70
-        echo "    </div>
-    ";
-        // line 78
-        echo "    ";
+        $this->displayBlock('footer', $context, $blocks);
+        // line 74
+        echo "\t\t</div>
+
+\t\t";
+        // line 76
         $this->displayBlock('bottom', $context, $blocks);
-        // line 91
-        echo "</body>
+        // line 86
+        echo "\t</body>
 </html>
 ";
         $this->deferred->resolve($this, $context, $blocks);
@@ -91,112 +91,119 @@ class __TwigTemplate_ede6dbd58457fb8ba7161dcc99503b2bf340f4eec9c3a8a5d6c9fa134c0
     public function block_head($context, array $blocks = [])
     {
         // line 6
-        echo "    <meta charset=\"utf-8\" />
-    <title>";
-        // line 7
+        echo "\t\t\t<meta charset=\"utf-8\"/>
+\t\t\t<title>
+\t\t\t\t";
+        // line 8
         if ($this->getAttribute(($context["header"] ?? null), "title", [])) {
+            // line 9
+            echo "\t\t\t\t\t";
             echo twig_escape_filter($this->env, $this->getAttribute(($context["header"] ?? null), "title", []), "html");
-            echo " | ";
+            echo "
+\t\t\t\t\t|
+\t\t\t\t";
         }
+        // line 12
+        echo "\t\t\t\t";
         echo twig_escape_filter($this->env, $this->getAttribute(($context["site"] ?? null), "title", []), "html");
         echo "</title>
-    ";
-        // line 8
-        $this->loadTemplate("partials/metadata.html.twig", "partials/base.html.twig", 8)->display($context);
-        // line 9
-        echo "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no\">
-    <link rel=\"icon\" type=\"image/png\" href=\"";
-        // line 10
-        echo twig_escape_filter($this->env, $this->env->getExtension('Grav\Common\Twig\Extension\GravExtension')->urlFunc("theme://images/favicon.png"), "html", null, true);
-        echo "\" />
-    <link rel=\"canonical\" href=\"";
-        // line 11
-        echo twig_escape_filter($this->env, $this->getAttribute(($context["page"] ?? null), "url", [0 => true, 1 => true], "method"), "html", null, true);
-        echo "\" />
-
-    ";
+\t\t\t";
         // line 13
+        $this->loadTemplate("partials/metadata.html.twig", "partials/base.html.twig", 13)->display($context);
+        // line 14
+        echo "\t\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no\">
+\t\t\t<link rel=\"icon\" type=\"image/png\" href=\"";
+        // line 15
+        echo twig_escape_filter($this->env, $this->env->getExtension('Grav\Common\Twig\Extension\GravExtension')->urlFunc("theme://images/favicon.png"), "html", null, true);
+        echo "\"/>
+\t\t\t<link rel=\"canonical\" href=\"";
+        // line 16
+        echo twig_escape_filter($this->env, $this->getAttribute(($context["page"] ?? null), "url", [0 => true, 1 => true], "method"), "html", null, true);
+        echo "\"/>
+
+\t\t\t";
+        // line 18
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 29
+        // line 34
         echo "
-    ";
-        // line 30
+\t\t\t";
+        // line 35
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 36
-        echo "
-    ";
-        // line 37
-        $this->displayBlock('assets', $context, $blocks);
         // line 41
         echo "
-";
+\t\t\t";
+        // line 42
+        $this->displayBlock('assets', $context, $blocks);
+        // line 46
+        echo "
+\t\t";
     }
 
-    // line 13
+    // line 18
     public function block_stylesheets($context, array $blocks = [])
     {
-        // line 14
-        echo "        ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/pure-0.5.0/grids-min.css", 1 => 103], "method");
-        // line 15
-        echo "        ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css-compiled/nucleus.css", 1 => 102], "method");
-        // line 16
-        echo "        ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css-compiled/template.css", 1 => 101], "method");
-        // line 17
-        echo "        ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/custom.css", 1 => 100], "method");
-        // line 18
-        echo "        ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/font-awesome.min.css", 1 => 100], "method");
         // line 19
-        echo "        ";
-        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/slidebars.min.css"], "method");
+        echo "\t\t\t\t";
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/pure-0.5.0/grids-min.css", 1 => 103], "method");
         // line 20
-        echo "
-        ";
+        echo "\t\t\t\t";
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css-compiled/nucleus.css", 1 => 102], "method");
         // line 21
-        if ((($this->getAttribute(($context["browser"] ?? null), "getBrowser", []) == "msie") && ($this->getAttribute(($context["browser"] ?? null), "getVersion", []) == 10))) {
-            // line 22
-            echo "            ";
-            $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/nucleus-ie10.css"], "method");
-            // line 23
-            echo "        ";
-        }
+        echo "\t\t\t\t";
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css-compiled/template.css", 1 => 101], "method");
+        // line 22
+        echo "\t\t\t\t";
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/custom.css", 1 => 100], "method");
+        // line 23
+        echo "\t\t\t\t";
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/font-awesome.min.css", 1 => 100], "method");
         // line 24
-        echo "        ";
-        if (((($this->getAttribute(($context["browser"] ?? null), "getBrowser", []) == "msie") && ($this->getAttribute(($context["browser"] ?? null), "getVersion", []) >= 8)) && ($this->getAttribute(($context["browser"] ?? null), "getVersion", []) <= 9))) {
-            // line 25
-            echo "            ";
-            $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/nucleus-ie9.css"], "method");
-            // line 26
-            echo "            ";
-            $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "theme://js/html5shiv-printshiv.min.js"], "method");
+        echo "\t\t\t\t";
+        $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/slidebars.min.css"], "method");
+        // line 25
+        echo "
+\t\t\t\t";
+        // line 26
+        if ((($this->getAttribute(($context["browser"] ?? null), "getBrowser", []) == "msie") && ($this->getAttribute(($context["browser"] ?? null), "getVersion", []) == 10))) {
             // line 27
-            echo "        ";
+            echo "\t\t\t\t\t";
+            $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/nucleus-ie10.css"], "method");
+            // line 28
+            echo "\t\t\t\t";
         }
-        // line 28
-        echo "    ";
+        // line 29
+        echo "\t\t\t\t";
+        if (((($this->getAttribute(($context["browser"] ?? null), "getBrowser", []) == "msie") && ($this->getAttribute(($context["browser"] ?? null), "getVersion", []) >= 8)) && ($this->getAttribute(($context["browser"] ?? null), "getVersion", []) <= 9))) {
+            // line 30
+            echo "\t\t\t\t\t";
+            $this->getAttribute(($context["assets"] ?? null), "addCss", [0 => "theme://css/nucleus-ie9.css"], "method");
+            // line 31
+            echo "\t\t\t\t\t";
+            $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "theme://js/html5shiv-printshiv.min.js"], "method");
+            // line 32
+            echo "\t\t\t\t";
+        }
+        // line 33
+        echo "\t\t\t";
     }
 
-    // line 30
+    // line 35
     public function block_javascripts($context, array $blocks = [])
     {
-        // line 31
-        echo "        ";
+        // line 36
+        echo "\t\t\t\t";
         $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "jquery", 1 => 101], "method");
-        // line 32
-        echo "        ";
+        // line 37
+        echo "\t\t\t\t";
         $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "theme://js/modernizr.custom.71422.js", 1 => 100], "method");
-        // line 33
-        echo "        ";
+        // line 38
+        echo "\t\t\t\t";
         $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "theme://js/antimatter.js"], "method");
-        // line 34
-        echo "        ";
+        // line 39
+        echo "\t\t\t\t";
         $this->getAttribute(($context["assets"] ?? null), "addJs", [0 => "theme://js/slidebars.min.js"], "method");
-        // line 35
-        echo "    ";
+        // line 40
+        echo "\t\t\t";
     }
 
     public function block_assets($context, array $blocks = [])
@@ -204,99 +211,95 @@ class __TwigTemplate_ede6dbd58457fb8ba7161dcc99503b2bf340f4eec9c3a8a5d6c9fa134c0
         $this->deferred->defer($this, 'assets');
     }
 
-    // line 37
+    // line 42
     public function block_assets_deferred($context, array $blocks = [])
     {
-        // line 38
-        echo "        ";
+        // line 43
+        echo "\t\t\t\t";
         echo $this->getAttribute(($context["assets"] ?? null), "css", [], "method");
         echo "
-        ";
-        // line 39
+\t\t\t\t";
+        // line 44
         echo $this->getAttribute(($context["assets"] ?? null), "js", [], "method");
         echo "
-    ";
+\t\t\t";
         $this->deferred->resolve($this, $context, $blocks);
     }
 
-    // line 46
+    // line 51
     public function block_header($context, array $blocks = [])
     {
-        // line 47
-        echo "        
-        ";
-        // line 48
-        $this->loadTemplate("partials/header.html.twig", "partials/base.html.twig", 48)->display($context);
-        // line 49
-        echo "        ";
+        // line 52
+        echo "
+\t\t\t\t";
+        // line 53
+        $this->loadTemplate("partials/header.html.twig", "partials/base.html.twig", 53)->display($context);
+        // line 54
+        echo "\t\t\t";
     }
 
-    // line 51
+    // line 56
     public function block_showcase($context, array $blocks = [])
     {
     }
 
-    // line 53
+    // line 58
     public function block_body($context, array $blocks = [])
     {
-        // line 54
-        echo "        <section id=\"body\" class=\"";
+        // line 59
+        echo "\t\t\t\t<section id=\"body\" class=\"";
         echo twig_escape_filter($this->env, ($context["class"] ?? null), "html", null, true);
         echo "\">
-            <div id=\"main\">
-                ";
-        // line 56
+\t\t\t\t\t<div id=\"main\">
+\t\t\t\t\t\t";
+        // line 61
         $this->displayBlock('content', $context, $blocks);
-        // line 57
-        echo "            </div>
-            <div id=\"sidebar\" >
-             ";
-        // line 59
-        $this->loadTemplate("partials/sidebar.html.twig", "partials/base.html.twig", 59)->display($context);
-        // line 60
-        echo "            </div>
+        // line 62
+        echo "\t\t\t\t\t</div>
+\t\t\t\t\t<div id=\"sidebar\">
+\t\t\t\t\t\t";
+        // line 64
+        $this->loadTemplate("partials/sidebar.html.twig", "partials/base.html.twig", 64)->display($context);
+        // line 65
+        echo "\t\t\t\t\t</div>
+\t\t\t\t</section>
 
-        </section>
-
-        ";
+\t\t\t";
     }
 
-    // line 56
+    // line 61
     public function block_content($context, array $blocks = [])
     {
     }
 
-    // line 66
+    // line 70
     public function block_footer($context, array $blocks = [])
     {
-        // line 67
-        echo "      
-         ";
-        // line 68
-        $this->loadTemplate("partials/footer.html.twig", "partials/base.html.twig", 68)->display($context);
-        // line 69
-        echo "        ";
+        // line 71
+        echo "
+\t\t\t\t";
+        // line 72
+        $this->loadTemplate("partials/footer.html.twig", "partials/base.html.twig", 72)->display($context);
+        // line 73
+        echo "\t\t\t";
     }
 
-    // line 78
+    // line 76
     public function block_bottom($context, array $blocks = [])
     {
-        // line 79
-        echo "         <script>
-        \$(function () {
-            \$(document).ready(function() {
-              \$.slidebars({
-                hideControlClasses: true,
-                scrollLock: true
-              });
-            });
-        });
-        </script>
-        ";
-        // line 89
+        // line 77
+        echo "\t\t\t<script>
+\t\t\t\t\$(function () {
+\$(document).ready(function () {
+\$.slidebars({hideControlClasses: true, scrollLock: true});
+});
+});
+\t\t\t</script>
+\t\t\t";
+        // line 84
         echo $this->getAttribute(($context["assets"] ?? null), "js", [0 => "bottom"], "method");
         echo "
-    ";
+\t\t";
     }
 
     public function getTemplateName()
@@ -311,7 +314,7 @@ class __TwigTemplate_ede6dbd58457fb8ba7161dcc99503b2bf340f4eec9c3a8a5d6c9fa134c0
 
     public function getDebugInfo()
     {
-        return array (  297 => 89,  285 => 79,  282 => 78,  278 => 69,  276 => 68,  273 => 67,  270 => 66,  265 => 56,  257 => 60,  255 => 59,  251 => 57,  249 => 56,  243 => 54,  240 => 53,  235 => 51,  231 => 49,  229 => 48,  226 => 47,  223 => 46,  216 => 39,  211 => 38,  208 => 37,  199 => 35,  196 => 34,  193 => 33,  190 => 32,  187 => 31,  184 => 30,  180 => 28,  177 => 27,  174 => 26,  171 => 25,  168 => 24,  165 => 23,  162 => 22,  160 => 21,  157 => 20,  154 => 19,  151 => 18,  148 => 17,  145 => 16,  142 => 15,  139 => 14,  136 => 13,  131 => 41,  129 => 37,  126 => 36,  124 => 30,  121 => 29,  119 => 13,  114 => 11,  110 => 10,  107 => 9,  105 => 8,  97 => 7,  94 => 6,  91 => 5,  84 => 91,  81 => 78,  78 => 70,  76 => 66,  73 => 65,  71 => 53,  68 => 52,  66 => 51,  63 => 50,  61 => 46,  56 => 44,  53 => 43,  51 => 5,  46 => 3,  43 => 2,  41 => 1,);
+        return array (  300 => 84,  291 => 77,  288 => 76,  284 => 73,  282 => 72,  279 => 71,  276 => 70,  271 => 61,  264 => 65,  262 => 64,  258 => 62,  256 => 61,  250 => 59,  247 => 58,  242 => 56,  238 => 54,  236 => 53,  233 => 52,  230 => 51,  223 => 44,  218 => 43,  215 => 42,  206 => 40,  203 => 39,  200 => 38,  197 => 37,  194 => 36,  191 => 35,  187 => 33,  184 => 32,  181 => 31,  178 => 30,  175 => 29,  172 => 28,  169 => 27,  167 => 26,  164 => 25,  161 => 24,  158 => 23,  155 => 22,  152 => 21,  149 => 20,  146 => 19,  143 => 18,  138 => 46,  136 => 42,  133 => 41,  131 => 35,  128 => 34,  126 => 18,  121 => 16,  117 => 15,  114 => 14,  112 => 13,  107 => 12,  100 => 9,  98 => 8,  94 => 6,  91 => 5,  84 => 86,  82 => 76,  78 => 74,  76 => 70,  73 => 69,  71 => 58,  68 => 57,  66 => 56,  63 => 55,  61 => 51,  56 => 49,  53 => 48,  51 => 5,  46 => 3,  43 => 2,  41 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -327,94 +330,89 @@ class __TwigTemplate_ede6dbd58457fb8ba7161dcc99503b2bf340f4eec9c3a8a5d6c9fa134c0
         return new Source("{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 <!DOCTYPE html>
 <html lang=\"{{ grav.language.getActive ?: grav.config.site.default_lang }}\">
-<head>
-{% block head %}
-    <meta charset=\"utf-8\" />
-    <title>{% if header.title %}{{ header.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
-    {% include 'partials/metadata.html.twig' %}
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no\">
-    <link rel=\"icon\" type=\"image/png\" href=\"{{ url('theme://images/favicon.png') }}\" />
-    <link rel=\"canonical\" href=\"{{ page.url(true, true) }}\" />
+\t<head>
+\t\t{% block head %}
+\t\t\t<meta charset=\"utf-8\"/>
+\t\t\t<title>
+\t\t\t\t{% if header.title %}
+\t\t\t\t\t{{ header.title|e('html') }}
+\t\t\t\t\t|
+\t\t\t\t{% endif %}
+\t\t\t\t{{ site.title|e('html') }}</title>
+\t\t\t{% include 'partials/metadata.html.twig' %}
+\t\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no\">
+\t\t\t<link rel=\"icon\" type=\"image/png\" href=\"{{ url('theme://images/favicon.png') }}\"/>
+\t\t\t<link rel=\"canonical\" href=\"{{ page.url(true, true) }}\"/>
 
-    {% block stylesheets %}
-        {% do assets.addCss('theme://css/pure-0.5.0/grids-min.css', 103) %}
-        {% do assets.addCss('theme://css-compiled/nucleus.css', 102) %}
-        {% do assets.addCss('theme://css-compiled/template.css', 101) %}
-        {% do assets.addCss('theme://css/custom.css', 100) %}
-        {% do assets.addCss('theme://css/font-awesome.min.css', 100) %}
-        {% do assets.addCss('theme://css/slidebars.min.css') %}
+\t\t\t{% block stylesheets %}
+\t\t\t\t{% do assets.addCss('theme://css/pure-0.5.0/grids-min.css', 103) %}
+\t\t\t\t{% do assets.addCss('theme://css-compiled/nucleus.css', 102) %}
+\t\t\t\t{% do assets.addCss('theme://css-compiled/template.css', 101) %}
+\t\t\t\t{% do assets.addCss('theme://css/custom.css', 100) %}
+\t\t\t\t{% do assets.addCss('theme://css/font-awesome.min.css', 100) %}
+\t\t\t\t{% do assets.addCss('theme://css/slidebars.min.css') %}
 
-        {% if browser.getBrowser == 'msie' and browser.getVersion == 10 %}
-            {% do assets.addCss('theme://css/nucleus-ie10.css') %}
-        {% endif %}
-        {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
-            {% do assets.addCss('theme://css/nucleus-ie9.css') %}
-            {% do assets.addJs('theme://js/html5shiv-printshiv.min.js') %}
-        {% endif %}
-    {% endblock %}
+\t\t\t\t{% if browser.getBrowser == 'msie' and browser.getVersion == 10 %}
+\t\t\t\t\t{% do assets.addCss('theme://css/nucleus-ie10.css') %}
+\t\t\t\t{% endif %}
+\t\t\t\t{% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
+\t\t\t\t\t{% do assets.addCss('theme://css/nucleus-ie9.css') %}
+\t\t\t\t\t{% do assets.addJs('theme://js/html5shiv-printshiv.min.js') %}
+\t\t\t\t{% endif %}
+\t\t\t{% endblock %}
 
-    {% block javascripts %}
-        {% do assets.addJs('jquery', 101) %}
-        {% do assets.addJs('theme://js/modernizr.custom.71422.js', 100) %}
-        {% do assets.addJs('theme://js/antimatter.js') %}
-        {% do assets.addJs('theme://js/slidebars.min.js') %}
-    {% endblock %}
+\t\t\t{% block javascripts %}
+\t\t\t\t{% do assets.addJs('jquery', 101) %}
+\t\t\t\t{% do assets.addJs('theme://js/modernizr.custom.71422.js', 100) %}
+\t\t\t\t{% do assets.addJs('theme://js/antimatter.js') %}
+\t\t\t\t{% do assets.addJs('theme://js/slidebars.min.js') %}
+\t\t\t{% endblock %}
 
-    {% block assets deferred %}
-        {{ assets.css()|raw }}
-        {{ assets.js()|raw }}
-    {% endblock %}
+\t\t\t{% block assets deferred %}
+\t\t\t\t{{ assets.css()|raw }}
+\t\t\t\t{{ assets.js()|raw }}
+\t\t\t{% endblock %}
 
-{% endblock head %}
-</head>
-<body id=\"top\" class=\"{{ page.header.body_classes }}\">
-    <div id=\"sb-site\">
-        {% block header %}
-        
-        {% include 'partials/header.html.twig' %}
-        {% endblock %}
+\t\t{% endblock head %}
+\t</head>
+\t<body id=\"top\" class=\"{{ page.header.body_classes }}\">
+\t\t<div id=\"sb-site\">
+\t\t\t{% block header %}
 
-        {% block showcase %}{% endblock %}
+\t\t\t\t{% include 'partials/header.html.twig' %}
+\t\t\t{% endblock %}
 
-        {% block body %}
-        <section id=\"body\" class=\"{{ class }}\">
-            <div id=\"main\">
-                {% block content %}{% endblock %}
-            </div>
-            <div id=\"sidebar\" >
-             {% include 'partials/sidebar.html.twig' %}
-            </div>
+\t\t\t{% block showcase %}{% endblock %}
 
-        </section>
+\t\t\t{% block body %}
+\t\t\t\t<section id=\"body\" class=\"{{ class }}\">
+\t\t\t\t\t<div id=\"main\">
+\t\t\t\t\t\t{% block content %}{% endblock %}
+\t\t\t\t\t</div>
+\t\t\t\t\t<div id=\"sidebar\">
+\t\t\t\t\t\t{% include 'partials/sidebar.html.twig' %}
+\t\t\t\t\t</div>
+\t\t\t\t</section>
 
-        {% endblock %}
+\t\t\t{% endblock %}
 
-        {% block footer %}
-      
-         {% include 'partials/footer.html.twig' %}
-        {% endblock %}
-    </div>
-    {# {% block sidebar_navigation %}
-        <div class=\"sb-slidebar sb-left sb-width-thin\">
-            <div id=\"panel\">
-            {% include 'partials/navigation.html.twig' %}
-            </div>
-        </div>
-    {% endblock %} #}
-    {% block bottom %}
-         <script>
-        \$(function () {
-            \$(document).ready(function() {
-              \$.slidebars({
-                hideControlClasses: true,
-                scrollLock: true
-              });
-            });
-        });
-        </script>
-        {{ assets.js('bottom')|raw }}
-    {% endblock %}
-</body>
+\t\t\t{% block footer %}
+
+\t\t\t\t{% include 'partials/footer.html.twig' %}
+\t\t\t{% endblock %}
+\t\t</div>
+
+\t\t{% block bottom %}
+\t\t\t<script>
+\t\t\t\t\$(function () {
+\$(document).ready(function () {
+\$.slidebars({hideControlClasses: true, scrollLock: true});
+});
+});
+\t\t\t</script>
+\t\t\t{{ assets.js('bottom')|raw }}
+\t\t{% endblock %}
+\t</body>
 </html>
 ", "partials/base.html.twig", "D:\\laragon\\www\\my-grav-site\\user\\themes\\antimatter\\templates\\partials\\base.html.twig");
     }

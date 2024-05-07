@@ -28,25 +28,22 @@ class __TwigTemplate_6476b813c5db435125bb69df49e3b42cf04e40dbbeb9f0ff244ae87b60a
     {
         // line 1
         echo "<header id=\"header\">
-  <div class=\"container-header\">
-    <div id=\"logo\">
-        
-          <a  href=\"";
+\t<div class=\"container-header\">
+\t\t<div id=\"logo\">
+
+\t\t\t<a href=\"";
         // line 5
         echo twig_escape_filter($this->env, ($context["base_url_relative"] ?? null), "html", null, true);
         echo "\"><img height=\"100px\" width=\"90px\" src=\"";
         echo twig_escape_filter($this->env, ($context["theme_url"] ?? null), "html", null, true);
-        echo "/images/logo3.png\" alt=\"";
-        echo twig_escape_filter($this->env, $this->getAttribute(($context["site"] ?? null), "title", []), "html");
-        echo "\" /></a>
-    </div>
-    ";
+        echo "/images/logo.png\"/></a>
+\t\t</div>
+\t\t";
         // line 7
         $this->loadTemplate("partials/navigation.html.twig", "partials/header.html.twig", 7)->display($context);
         // line 8
-        echo "  </div>
+        echo "\t</div>
 </header>
-
 ";
     }
 
@@ -62,7 +59,7 @@ class __TwigTemplate_6476b813c5db435125bb69df49e3b42cf04e40dbbeb9f0ff244ae87b60a
 
     public function getDebugInfo()
     {
-        return array (  47 => 8,  45 => 7,  36 => 5,  30 => 1,);
+        return array (  45 => 8,  43 => 7,  36 => 5,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -76,15 +73,14 @@ class __TwigTemplate_6476b813c5db435125bb69df49e3b42cf04e40dbbeb9f0ff244ae87b60a
     public function getSourceContext()
     {
         return new Source("<header id=\"header\">
-  <div class=\"container-header\">
-    <div id=\"logo\">
-        
-          <a  href=\"{{ base_url_relative }}\"><img height=\"100px\" width=\"90px\" src=\"{{ theme_url }}/images/logo3.png\" alt=\"{{ site.title|e('html') }}\" /></a>
-    </div>
-    {% include 'partials/navigation.html.twig' %}
-  </div>
-</header>
+\t<div class=\"container-header\">
+\t\t<div id=\"logo\">
 
+\t\t\t<a href=\"{{ base_url_relative }}\"><img height=\"100px\" width=\"90px\" src=\"{{ theme_url }}/images/logo.png\"/></a>
+\t\t</div>
+\t\t{% include 'partials/navigation.html.twig' %}
+\t</div>
+</header>
 ", "partials/header.html.twig", "D:\\laragon\\www\\my-grav-site\\user\\themes\\antimatter\\templates\\partials\\header.html.twig");
     }
 }

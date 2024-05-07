@@ -26,29 +26,32 @@ class __TwigTemplate_f346259c67b1f8df617f612d48ec3b0431eae08805e3e34192c6f45b507
 
     protected function doDisplay(array $context, array $blocks = [])
     {
-        // line 55
-        echo "
-<nav id=\"navigation\">
-      <ul>
-        ";
-        // line 58
+        // line 1
+        echo "<nav id=\"navigation\">
+\t<ul>
+\t\t";
+        // line 3
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute(($context["pages"] ?? null), "children", []), "visible", []));
         foreach ($context['_seq'] as $context["_key"] => $context["page"]) {
-            // line 59
-            echo "          <li><a href=\"";
+            // line 4
+            echo "\t\t\t<li>
+\t\t\t\t<a href=\"";
+            // line 5
             echo twig_escape_filter($this->env, $this->getAttribute($context["page"], "url", []), "html", null, true);
             echo "\">";
             echo twig_escape_filter($this->env, $this->getAttribute($context["page"], "menu", []), "html", null, true);
-            echo "</a></li>
-        ";
+            echo "</a>
+\t\t\t</li>
+\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['page'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 61
-        echo "      </ul>
-</nav>";
+        // line 8
+        echo "\t</ul>
+</nav>
+";
     }
 
     public function getTemplateName()
@@ -63,7 +66,7 @@ class __TwigTemplate_f346259c67b1f8df617f612d48ec3b0431eae08805e3e34192c6f45b507
 
     public function getDebugInfo()
     {
-        return array (  50 => 61,  39 => 59,  35 => 58,  30 => 55,);
+        return array (  52 => 8,  41 => 5,  38 => 4,  34 => 3,  30 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -76,67 +79,15 @@ class __TwigTemplate_f346259c67b1f8df617f612d48ec3b0431eae08805e3e34192c6f45b507
 
     public function getSourceContext()
     {
-        return new Source("{# {% import _self as macros %}
-
-{% macro loop(page) %}
-    {% import _self as macros %}
-    {% for p in page.children.visible %}
-        {% set current_page = (p.active or p.activeChild) ? 'active' : '' %}
-        {% if p.children.visible.count > 0 %}
-            <li class=\"has-children {{ current_page }}\">
-                <a href=\"{{ p.url }}\">
-                    {% if p.header.icon %}<i class=\"fa fa-{{ p.header.icon }}\"></i>{% endif %}
-                    {{ p.menu }}
-                    <span></span>
-                </a>
-                <ul>
-                    {{ macros.loop(p) }}
-                </ul>
-            </li>
-        {% else %}
-            <li class=\"{{ current_page }}\">
-                <a href=\"{{ p.url }}\">
-                    {% if p.header.icon %}<i class=\"fa fa-{{ p.header.icon }}\"></i>{% endif %}
-                    {{ p.menu }}
-                </a>
-            </li>
-        {% endif %}
-    {% endfor %}
-{% endmacro %}
-
-<ul class=\"navigation\">
-    {% if theme_config.dropdown.enabled %}
-        {{ macros.loop(pages) }}
-    {% else %}
-        {% for page in pages.children.visible %}
-            {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
-            <li class=\"{{ current_page }}\">
-                <a href=\"{{ page.url }}\">
-                    {% if page.header.icon %}<i class=\"fa fa-{{ page.header.icon }}\"></i>{% endif %}
-                    {{ page.menu }}
-                </a>
-            </li>
-        {% endfor %}
-    {% endif %}
-    {% for mitem in site.menu %}
-        <li>
-            <a href=\"{{ mitem.url }}\">
-                {% if mitem.icon %}<i class=\"fa fa-{{ mitem.icon }}\"></i>{% endif %}
-                {{ mitem.text }}
-            </a>
-        </li>
-    {% endfor %}
-    {% if config.plugins.login.enabled and grav.user.username %}
-        <li><i class=\"fa fa-lock\"></i> {% include 'partials/login-status.html.twig' %}</li>
-    {% endif %}
-</ul> #}
-
-<nav id=\"navigation\">
-      <ul>
-        {% for page in pages.children.visible %}
-          <li><a href=\"{{ page.url }}\">{{ page.menu }}</a></li>
-        {% endfor %}
-      </ul>
-</nav>", "partials/navigation.html.twig", "D:\\laragon\\www\\my-grav-site\\user\\themes\\antimatter\\templates\\partials\\navigation.html.twig");
+        return new Source("<nav id=\"navigation\">
+\t<ul>
+\t\t{% for page in pages.children.visible %}
+\t\t\t<li>
+\t\t\t\t<a href=\"{{ page.url }}\">{{ page.menu }}</a>
+\t\t\t</li>
+\t\t{% endfor %}
+\t</ul>
+</nav>
+", "partials/navigation.html.twig", "D:\\laragon\\www\\my-grav-site\\user\\themes\\antimatter\\templates\\partials\\navigation.html.twig");
     }
 }
