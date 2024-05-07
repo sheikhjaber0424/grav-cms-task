@@ -1,0 +1,5 @@
+1715002794
+O:39:"Grav\Common\Flex\Types\Pages\PageObject":4:{s:4:"type";s:5:"pages";s:3:"key";s:5:"home2";s:8:"elements";a:8:{s:4:"root";b:0;s:11:"storage_key";s:8:"05.home2";s:6:"header";a:1:{s:5:"title";s:5:"Home2";}s:4:"name";s:10:"default.md";s:11:"frontmatter";s:13:"title: Home2
+";s:4:"slug";s:5:"home2";s:8:"ordering";b:1;s:8:"markdown";s:150:"## Unleash the Power of Data‑Driven E‑commerce 
+Drive Growth, Optimize Conversions
+and Maximize ROI with Metricalo's 360 E‑commerce CRM Platform";}s:7:"storage";a:6:{s:3:"key";s:5:"home2";s:11:"storage_key";s:8:"05.home2";s:8:"template";s:7:"default";s:17:"storage_timestamp";i:1714997146;s:8:"markdown";a:1:{s:0:"";a:1:{s:7:"default";i:1714997146;}}s:8:"checksum";s:32:"c60d6121f95e3f8e219f934c62999f89";}}
